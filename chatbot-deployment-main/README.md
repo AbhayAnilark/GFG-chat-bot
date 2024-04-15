@@ -1,40 +1,38 @@
-Chatbot Deployment with Flask and JavaScript
+# Chatbot Deployment
 
-Welcome to the deployment guide for your chatbot project! In this tutorial, you'll learn how to deploy the chatbot you created using Flask and JavaScript. Whether you want to integrate it within a Flask app with Jinja2 templates or serve it as a standalone Flask prediction API, this guide has got you covered.
+In this tutorial we deploy the chatbot I created in [this]([https://github.com/python-engineer/pytorch-chatbo](https://github.com/AbhayAnilark/GFG-chat-bot/tree/main/chatbot-deployment-main)t) tutorial with Flask and JavaScript.
 
-Initial Setup:
+Integrated Flask App: I've created a Flask application with Jinja2 templates to seamlessly incorporate my chatbot. Users can interact with it directly within the app.
+Flask Prediction API: Alternatively, I've set up a Flask prediction API. This allows the chatbot functionality to be separated from the frontend. The HTML and JavaScript files can easily be integrated into any frontend application with minimal adjustments.
 
-Cloning the Repository and Creating a Virtual Environment
-Clone the repository and set up a virtual environment to isolate your project's dependencies:
 
-bash
-Copy code
-$ git clone https://github.com/your-username/chatbot-deployment.git
+## Initial Setup:
+This repo currently contains the starter files.
+
+Clone repo and create a virtual environment
+```
+$ git clone https://github.com/python-engineer/chatbot-deployment.git
 $ cd chatbot-deployment
 $ python3 -m venv venv
 $ . venv/bin/activate
-Installing Dependencies
-Install the required dependencies for your project:
-
-bash
-Copy code
+```
+Install dependencies
+```
 $ (venv) pip install Flask torch torchvision nltk
-Don't forget to install the NLTK package:
-
-bash
-Copy code
+```
+Install nltk package
+```
 $ (venv) python
 >>> import nltk
 >>> nltk.download('punkt')
-Training the Chatbot
-Train your chatbot by running the following commands:
+```
 
-bash
-Copy code
+Run
+```
 $ (venv) python train.py
+```
+This will dump data.pth file. And then run
+the following command to test it in the console.
+```
 $ (venv) python chat.py
-Note:
-
-You can deploy your chatbot using Flask and JavaScript. You can integrate it within a Flask app with Jinja2 templates or serve it as a standalone Flask prediction API.
-
-Feel free to customize this README further to reflect any additional details or instructions specific to your project. Happy coding!
+```
